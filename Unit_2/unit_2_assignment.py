@@ -98,7 +98,7 @@ print(f"For Delivery Contact: {phone_num}")  # Print the phone number specified 
 
 
 # This approach illustrates several key features of Python:
-# Dicionary handling; showcasing the ability to easily store and retrieve data using key-value pairs.
+# Dictionary handling; showcasing the ability to easily store and retrieve data using key-value pairs.
 # Combinatorics: Using itertools.combinations shows how powerful Python's capabilities are for generating subsets of collections.
     # It also helps dynamically generate all combinations without the need to manually specify then. This helps keep the code flexible.
 # List Comprehension: The use of list comprehension helps illustrate Python's capability to write clean and expressive code, creating the list in a single line
