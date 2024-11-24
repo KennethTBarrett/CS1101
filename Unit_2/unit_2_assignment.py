@@ -100,13 +100,12 @@ print(f"For Delivery Contact: {phone_num}")  # Print the phone number specified 
 # This approach illustrates several key features of Python:
 # Dictionary handling; showcasing the ability to easily store and retrieve data using key-value pairs.
 # Combinatorics: Using itertools.combinations shows how powerful Python's capabilities are for generating subsets of collections.
-    # It also helps dynamically generate all combinations without the need to manually specify then. This helps keep the code flexible.
+    # It also helps dynamically generate all combinations without the need to manually specify them. This helps keep the code flexible.
 # List Comprehension: The use of list comprehension helps illustrate Python's capability to write clean and expressive code, creating the list in a single line
     # and efficiently generating all relevant combinations.
 # Looping / Data Extraction: The for loop used extracted item names and prices, and illustrates Python's concise syntax for processing collections.
 # Mathematical calculations & Conditional logic: The use of conditional logic to apply different discount rates based on the number of unique items in a combination
-    # and dynamically calculate the discount and final price dynamically helps illustrate Python's strengths in numerical calculations.
-# String Manipulation: String joining as demonstrated in lines 77 and 79, in addition to the use of f-strings illustrate the ability to create user-friendly outputs
+    # and dynamically calculate the discount and final price helps illustrates Python's strengths in numerical calculations.
+# String Manipulation: String joining as demonstrated in lines 77 and 80, in addition to the use of f-strings, illustrates the ability to create user-friendly outputs
     # Additionally, the use of f-strings helps make formatting of financial values with two decimal places easily readable.
-# Modularity and Scalability: The ability for discount rates to be easily modified and the catalog to be easily expanded help illustrate Python's adaptability to changing
-    # business requirements.
+# Modularity and Scalability: The ability to modify discount rates and expand the catalog easily illustrates Python's adaptability to changing business requirements.
