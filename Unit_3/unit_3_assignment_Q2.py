@@ -52,7 +52,7 @@ if __name__ == "__main__":
 # it collects and processes. Lastly, error handling helps facilitate debugging efforts and informs long-term software maintenance.
 # (246 words)
 
-# No sources have been provided as this knowledge has been attained through my personal professional experience. In particular, error handling
+# No sources have been provided as this knowledge has been attained through my personal professional experience. In particular, extensive error handling
 # was a crucial part of my last development position working in a tax preparation software company where data security and integrity were of critical importance.
 # I have personally seen the lack of error handling result in disastrous results for companies and users alike.
 
