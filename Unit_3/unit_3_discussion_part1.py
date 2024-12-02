@@ -1,8 +1,13 @@
 # CHAINED VS NESTED CONDITIONALS:
 # A chained conditional uses a sequence of if-elif-else statements to evaluate multiple conditions
 # in a specified order from top to bottom, with each statement providing a new condition to evaluate
-# if the previous conditions were not true. On the other hand, a nested conditional is essentially a conditional
-# statement inside of another conditional. This means that 
+# if the previous conditions were not true. If one of the conditions is True, the contents of its block are executed, and 
+# processing stops. It is also worth nothing that if none of the conditions in the if-elif statements are true, the else statement will be used.
+
+# On the other hand, a nested conditional is essentially a conditional statement inside of another conditional. This means that we can check additional
+# conditions within a specific branch of a previous condition, creating a hierarchical logic where evaluating one condition is dependent on the outcome 
+# of a previous condition. In other words, the inner condition is dependent on the outer condition, meaning it will only be evaluated if the outer condition is True
+# and will simply not be evaluated if the outer condition is False.
 
 # Chained conditional.
 def what_generation(age):
