@@ -8,11 +8,10 @@ def divide():
             denom = format_num(float(input("Enter the denominator: ")))
 
             # If a user attempts to divide by zero, ZeroDivisionError: division by zero will be thrown.
-            # This will result in crashing of the program. As a result, we need to create a condition that will raise
-            # an error informing the user that division by zero is not possible. Otherwise, the program will crash.
-            # However, it's important to inform the user of why the error has been thrown and provide actionable
-            # information on how to fix it moving forward. As a result, we will use the following conditional statement,
-            # raising a ValueError.
+            # As a result, we need to create a condition that will raise an error informing the user that division
+            # by zero is not possible. Otherwise, the program will crash. However, it's important to inform the
+            # user of why the error has been thrown and provide actionable information on how to fix it moving forward. 
+            # As a result, we will use the following conditional statement, raising a ValueError.
             
             # If the user inputs 0, raise a value error to inform them numbers cannot be divided by zero.
             if denom == 0:
