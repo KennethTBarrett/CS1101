@@ -60,7 +60,6 @@ if __name__ == "__main__":
 # To summarize, error handling is vital for ensuring end users have a positive experience by preventing crashing, informing users of errors in a way that is clear,
 # and guiding them on how to solve them. It also helps ensure the stability and security of the software and the data
 # it collects and processes. Lastly, error handling helps facilitate debugging efforts and informs long-term software maintenance.
-
 # (244 words)
 
 # No sources have been provided as this knowledge has been attained through my personal professional experience. In particular, extensive error handling
