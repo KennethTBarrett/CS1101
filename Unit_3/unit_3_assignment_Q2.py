@@ -12,7 +12,7 @@ def divide():
 
             # If a user attempts to divide by zero, ZeroDivisionError: division by zero will be thrown.
             # As a result, we need to create a condition that will raise an error informing the user that division
-            # by zero is not possible. Otherwise, the program will crash. However, it's important to inform the
+            # by zero is not possible. Otherwise, the program will crash. Furthermore, it's important to inform the
             # user of why the error has been thrown and provide actionable information on how to fix it moving forward. 
             # As a result, we will use the following conditional statement, raising a ValueError.
             
