@@ -1,4 +1,7 @@
 def divide():
+    '''Asks user to input values for a numerator and denominator
+       Throws an exception if the user divides by zero. Formats numbers
+       for cleanliness in output regardless if the value is a float or integer.'''
     # Continue to request user input until valid values have been entered.
     while True:
         try:
