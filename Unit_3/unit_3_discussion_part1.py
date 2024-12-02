@@ -77,12 +77,12 @@ def generation_part(age):
     else:
         generation = "Unknown Generation"
         part_of_gen = "Unknown End"
-
-    return f"{age} is on the {part_of_gen} of the generation: {generation}"
+    # Using .lower() because I changed my mind on how I wanted this to print.
+    return f"{age} is on the {part_of_gen.lower()} of the generation: {generation}"
 
 
 
 # Example usage:
-print(generation_part(25))  # 25 is on the Older End of the generation: Gen Z
-print(generation_part(50))  # 50 is on the Younger End of the generation: Gen X
-print(generation_part(70))  # 70 is on the Older End of the generation: Baby Boomer
+print(generation_part(25))  # 25 is on the older end of the generation: Gen Z
+print(generation_part(50))  # 50 is on the younger end of the generation: Gen X
+print(generation_part(70))  # 70 is on the older end of the generation: Baby Boomer
