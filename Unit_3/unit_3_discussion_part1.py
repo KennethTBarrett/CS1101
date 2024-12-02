@@ -11,15 +11,15 @@ def what_generation(age):
         return "Gen Alpha"
     elif 12 <= age <= 27:
         return "Gen Z"
-    elif age <= 43:
+    elif 28 <= age <= 43:
         return "Millenial"
-    elif age <= 59:
+    elif 44 <= age <= 59:
         return "Gen X"
-    elif age <= 78:
+    elif 60 <= age <= 78:
         return "Baby Boomer"
-    elif age <= 96:
+    elif 79 <= age <= 96:
         return "Post-War"
-    elif age <= 102:
+    elif 97 <= age <= 102:
         return "WWII"
     else:
         # For simplification; not handling invalid values
@@ -31,33 +31,58 @@ print(what_generation(67))  # Baby Boomer
 print(what_generation(115))  # Unknown Generation
 
 # Nested conditional.
-def generation_iq(age, iq):
-    '''Accepts an age and IQ score, and returns the person's generation
-       based on currently accepted boundaries and level of intelligence
-       based on IQ according to KABC-II 2004 Descriptive Categories'''
+def generation_part(age):
     if age < 12:
         generation = "Gen Alpha"
+        if age <= 6:
+            part_of_gen = "Younger End"
+        else:
+            part_of_gen = "Older End"
     elif 12 <= age <= 27:
         generation = "Gen Z"
-    elif age <= 43:
+        if age <= 20:
+            part_of_gen = "Younger End"
+        else:
+            part_of_gen = "Older End"
+    elif 28 <= age <= 43:
         generation = "Millenial"
-    elif age <= 59:
+        if age <= 35:
+            part_of_gen = "Younger End"
+        else:
+            part_of_gen = "Older End"
+    elif 44 <= age <= 59:
         generation = "Gen X"
-    elif age <= 78:
+        if age <= 51:
+            part_of_gen = "Younger End"
+        else:
+            part_of_gen = "Older End"
+    elif 60 <= age <= 78:
         generation = "Baby Boomer"
-    elif age <= 96:
+        if age <= 69:
+            part_of_gen = "Younger End"
+        else:
+            part_of_gen = "Older End"
+    elif 79 <= age <= 96:
         generation = "Post-War"
-    elif age <= 102:
+        if age <= 85:
+            part_of_gen = "Younger End"
+        else:
+            part_of_gen = "Older End"
+    elif 97 <= age <= 102:
         generation = "WWII"
+        if age <= 99:
+            part_of_gen = "Younger End"
+        else:
+            part_of_gen = "Older End"
     else:
         generation = "Unknown Generation"
+        part_of_gen = "Unknown End"
 
-    # Return both the generation and intelligence
-    return f"Generation: {generation}, Intelligence: {intelligence}"
+    return f"{age} is on the {part_of_gen} of the generation: {generation}"
 
 
 
 # Example usage:
-print(generation_iq(25, 130))  # Gen Z, Above Average IQ
-print(generation_iq(50, 131))  # Gen X, Upper Extreme
-print(generation_iq(70, 90))   # Baby Boomer, Average IQ
+print(generation_part(25))  # 25 is on the Older End of the generation: Gen Z
+print(generation_part(50))  # 50 is on the Younger End of the generation: Gen X
+print(generation_part(70))  # 70 is on the Older End of the generation: Baby Boomer
