@@ -57,10 +57,10 @@ if __name__ == "__main__":
 # sensitive information that may result in decreased data and company security. Error handling helps validate inputs before performing 
 # operations and can provide alternative actions to fall back on. Aside from the users, error handling helps provide a structured way to log issues. 
 # This can make debugging easier and provide a way for developers to track recurring issues when the software is in production.
-# To sum it up, error handling is vital for ensuring end users have a positive experience by preventing crashing,
+# To summarize, error handling is vital for ensuring end users have a positive experience by preventing crashing,
 # informing users of errors in a way that is clear and guides them on how to solve them, helps ensure stability and security of the software and the data
 # it collects and processes. Lastly, error handling helps facilitate debugging efforts and informs long-term software maintenance.
-# (246 words)
+# (244 words)
 
 # No sources have been provided as this knowledge has been attained through my personal professional experience. In particular, extensive error handling
 # was a crucial part of my last development position working in a tax preparation software company where data security and integrity were of critical importance.
