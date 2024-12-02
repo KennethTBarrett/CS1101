@@ -1,3 +1,9 @@
+# CHAINED VS NESTED CONDITIONALS:
+# A chained conditional uses a sequence of if-elif-else statements to evaluate multiple conditions
+# in a specified order from top to bottom, with each statement providing a new condition to evaluate
+# if the previous conditions were not true. On the other hand, a nested conditional is essentially a conditional
+# statement inside of another conditional. This means that 
+
 # Chained conditional.
 def what_generation(age):
     '''Accepts an age, and returns the person's generation based on currently accepted boundaries.'''
@@ -46,21 +52,6 @@ def generation_iq(age, iq):
     else:
         generation = "Unknown Generation"
 
-    # Nested conditional for intelligence based on IQ
-    if iq <= 69:
-        intelligence = "Lower Extreme"
-    elif iq < 85:
-        intelligence = "Below Average IQ"
-    elif 85 <= iq < 115:
-        intelligence = "Average IQ"
-    elif 115 <= iq <= 130:
-        intelligence = "Above Average IQ"
-    elif iq > 130:
-        intelligence = "Upper Extreme"
-    else:
-        # For simplification; not handling invalid values
-        intelligence = "Unknown"
-    
     # Return both the generation and intelligence
     return f"Generation: {generation}, Intelligence: {intelligence}"
 
