@@ -6,6 +6,13 @@ def divide():
             # if user inputs a whole or floating-point number. Fed through format_num for visual cleanliness in print statement.
             num = format_num(float(input("Enter the numerator: ")))
             denom = format_num(float(input("Enter the denominator: ")))
+
+            # If a user attempts to divide by zero, ZeroDivisionError: division by zero will be thrown.
+            # This will result in crashing of the program. As a result, we need to create a condition that will raise
+            # an error informing the user that division by zero is not possible. Otherwise, the program will crash.
+            # However, it's important to inform the user of why the error has been thrown and provide actionable
+            # information on how to fix it moving forward. As a result, we will use the following conditional statement,
+            # raising a ValueError.
             
             # If the user inputs 0, raise a value error to inform them numbers cannot be divided by zero.
             if denom == 0:
@@ -19,7 +26,8 @@ def divide():
         # For example, if the value error raised in lines 11-12 applies, the user will be told that "Numbers cannot be divided by zero"
         # since the denominator cannot be 0 in a division calculation. Otherwise, any other value error that could be thrown, such
         # as from entering a non-numerical value as input, will be thrown, again informing the user a valid number for division
-        # calculations must be entered.
+        # calculations must be entered. Because we raised a ValueError for dividing by zero, this should help the user understand
+        # the cause of the error.
         except ValueError as e:
             print(f"Error: {e}. Please enter a valid number for division as input.")
 
