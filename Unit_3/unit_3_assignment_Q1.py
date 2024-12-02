@@ -6,7 +6,7 @@ def main():
             break  # Break the loop if the user inputs an integer.
         # If the user inputs a value that is not a valid integer...   
         except ValueError:  # ...Raise a ValueError, using the except block to print an error message.
-            print(f"Value entered is not an integer -- please enter a whole number, positive or negative.")
+            print("Value entered is not an integer -- please enter a whole number, positive or negative.")
     # Determine which function to call
     if value > 0:
         print(countdown(value))
@@ -41,3 +41,33 @@ def countdown(n):
 # Calls the main() function upon initial execution of the script.    
 if __name__ == "__main__":
     main()
+
+# SAMPLE OUTPUTS
+
+# POSITIVE INTEGER
+# Please enter an integer: 5
+# 5
+# 4
+# 3
+# 2
+# 1
+# Blastoff!
+
+# NEGATIVE INTEGER
+# Please enter an integer: -3
+# -3
+# -2
+# -1
+# Blastoff!
+
+# ZERO
+# Please enter an integer: 0
+# Blastoff!
+
+# NOT A NUMBER
+# Please enter an integer: testing
+# Value entered is not an integer -- please enter a whole number, positive or negative.
+
+# NOT AN INTEGER
+# Please enter an integer: 2.3
+# Value entered is not an integer -- please enter a whole number, positive or negative.
