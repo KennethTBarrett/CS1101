@@ -3,13 +3,13 @@
 # informs the SEO specialist whether the length needs to be shortened.
 
 # Step 1: Create a basic skeleton for our function; this function will be defined with
-# a string representing a URL as a parameter
+# a string representing a URL as a parameter. Returning None just to ensure the return is working as expected.
 # def meta_desc_len(url):
 #     return None
-# Test Input:
+# Test Input (Just using the World of Warcraft official website as a test URL):
 # print(meta_desc_check('https://worldofwarcraft.blizzard.com/en-us/'))  # Output: None (as expected)
 
-# Step 2: import requests; fetch the page content of a url. Return the response.
+# Step 2: import requests; fetch the page content of a url using a GET request. Return the response (this will not be the contents themselves, only the response with response code).
 # import requests
 # def meta_desc_len(url):
 #     response = requests.get(url)
@@ -21,6 +21,7 @@
 # installation; can be installed with pip using `pip install beautifulsoup4`) and parse the HTML content. 
 # If the response code is not 200, we will not be able to parse the HTML, so create a condition that
 # handles other status codes (it's very unlikely this will be needed but it's still important to handle). 
+# The output should be all HTML from the webpage provided.
 # import requests
 # from bs4 import BeautifulSoup
 # def meta_desc_len(url):
@@ -30,11 +31,11 @@
 #         return soup
 #     else:
 #         return f"Failed to retrieve the webpage. Status code: {response.status_code}"
-# # Test Input:
+# # Test Input (Just using the World of Warcraft official website as a test URL):
 # print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/'))  Output (as expected): all HTML code from the webpage -- too large to include here. Full output: https://pastebin.com/XjZ09y5L
 
 # Step 4: Using soup.find(), we can query the HTML to search for specific elements. Because meta descriptions are always stored as <meta name="description">, we can easily
-# find the meta description tag of a page if it exists.
+# find the meta description tag of a page if it exists. The output should be the relevant HTML from our meta description query.
 # import requests
 # from bs4 import BeautifulSoup
 # def meta_desc_len(url):
@@ -45,10 +46,11 @@
 #         return meta_description
 #     else:
 #         return f"Failed to retrieve the webpage. Status code: {response.status_code}"
-# # Test Input:
+# # Test Input (Just using the World of Warcraft official website as a test URL):
 # print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')) # Output (as expected): matching HTML code relative to the query; too large to include here. Full output: https://pastebin.com/TBxySmUJ
 
-# Step 5: If the meta description exists, return its content. If not, inform the user no meta description was found.
+# Step 5: If the meta description exists, return its content. If not, inform the user no meta description was found. The output should be the text contained in the 
+# meta description.
 # import requests
 # from bs4 import BeautifulSoup
 # def meta_desc_len(url):
@@ -64,11 +66,12 @@
 #             return "Meta description not found."
 #     else:
 #         return f"Failed to retrieve the webpage. Status code: {response.status_code}"
-# # Test Input:
+# # Test Input (Just using the World of Warcraft official website as a test URL):
 # print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')) # Output: "Join thousands of mighty heroes in Azeroth, a world of magic and limitless adventure." (as expected)
 
 # Step 6: As mentioned, SEO best-practices state that meta descriptions should be under approximately 155 characters. Using the meta description content attained during step 6,
 # calculate the number of characters contained. We will also be storing the meta description to be a part of our return statement later, as opposed to it being the return statement itself.
+# The output should be the number of characters in the meta description text.
 # import requests
 # from bs4 import BeautifulSoup
 # def meta_desc_len(url):
@@ -85,12 +88,12 @@
 #             return "Meta description not found."
 #     else:
 #         return f"Failed to retrieve the webpage. Status code: {response.status_code}"
-# # Test Input:
+# # Test Input (Just using the World of Warcraft official website as a test URL):
 # print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')) # Output: 85 (as expected)
 
-# Step 7: Evaluate whether the number of characters contained in the meta description fetched from the webpage is at or under 155 characters. Inform the user either way.
+# Step 7: Evaluate whether the number of characters contained in the meta description fetched from the webpage is at or under 155 characters. Inform the user either way in our return.
 # Additionally, similar to our handling of the text itself in step 6, we will be storing the character length of the meta description as well, as opposed to
-# simply returning it. This will be used as part of our return statement later.
+# simply returning it. This will be used as part of our return statement later. 
 # import requests
 # from bs4 import BeautifulSoup
 # def meta_desc_len(url):
@@ -111,7 +114,7 @@
 #             return "Meta description not found."
 #     else:
 #         return f"Failed to retrieve the webpage. Status code: {response.status_code}"
-# # Test Input:
+# # Test Input (Just using the World of Warcraft official website as a test URL):
 # print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')) # Output: Meta description length is within recommendations for SEO best-practices. (as expected)
 
 # Step 8: format the return statement to be helpful to the user. We will be using the contents of the meta description, the length, and our evaluation of whether
@@ -136,10 +139,11 @@
 #             return "Meta description not found."
 #     else:
 #         return f"Failed to retrieve the webpage. Status code: {response.status_code}"
-# # Test Input:
+# # Test Input (Just using the World of Warcraft official website as a test URL):
 # print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')) # Output: "Join thousands of mighty heroes in Azeroth, a world of magic and limitless adventure." is 85 characters long. Meta description length is under 155 characters and thus within recommendations for SEO best-practices.
 
-# Step 9: test the function using several URLs.
+# Step 9: test the function using several URLs. The output should once again include the contents of the meta description and the number of characters in it, in addition
+# to direct feedback about whether the length is too long.
 import requests
 from bs4 import BeautifulSoup
 def meta_desc_len(url):
