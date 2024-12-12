@@ -20,7 +20,7 @@
 # Step 3: if the response code is 200 as expected, import BeautifulSoup (will require
 # installation; can be installed with pip using `pip install beautifulsoup4`) and parse the HTML content. 
 # If the response code is not 200, we will not be able to parse the HTML, so create a condition that
-# handles other status codes. 
+# handles other status codes (it's very unlikely this will be needed but it's still important to handle). 
 # import requests
 # from bs4 import BeautifulSoup
 # def meta_desc_len(url):
