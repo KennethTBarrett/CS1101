@@ -1,0 +1,120 @@
+# Aerosmyth - Augmentation - 2024-12-10 19:41 - US/Sargeras
+# SimC Addon 11.0.5-02
+# WoW 11.0.5.57689, TOC 110005
+# Requires SimulationCraft 1000-01 or newer
+
+evoker="Aerosmyth"
+level=80
+race=dracthyr
+region=us
+server=sargeras
+role=
+professions=tailoring=92/enchanting=61
+spec=augmentation
+
+talents=CEcBV7//nP39x/JJympTqouKSwMLjtZmZGbDmZWmBzYmNAAAAAwAAgZGYYMUDzMDAAAAmZmZbMzsNmZgx2MwY2swCMwMM0IWwMD
+
+
+# Torchbearer's Coif (606)
+head=,id=211024,bonus_id=6652/10877/10377/10270/3185/10255
+# Enkindled Locket (603)
+neck=,id=219184,gem_id=213482/213458,bonus_id=10271/6652/3182/10255/10394/10879
+# Fumaroles of the Destroyer (626)
+shoulder=,id=212027,bonus_id=10355/10369/6652/10256/1527/10255
+# Wings of Shattered Sorrow (626)
+back=,id=225574,enchant_id=7403,bonus_id=10379/10355/10256/1527/10255
+# Scales of the Destroyer (626)
+chest=,id=212032,enchant_id=7364,bonus_id=10373/10390/6652/10256/1527/10255
+# Glyph-Etched Vambraces  (636)
+wrist=,id=219342,enchant_id=7385,bonus_id=10421/9633/8902/9627/11144/10520/8960/8791/10222/10877,crafted_stats=32/40,crafting_quality=5
+# Rippers of the Destroyer (626)
+hands=,id=212030,bonus_id=6652/10372/10256/1527/10255
+# Lost Watcher's Remains (613)
+waist=,id=212414,bonus_id=6652/10877/10379/10355/10264/1514/10255
+# Legguards of the Destroyer (626)
+legs=,id=212028,enchant_id=7534,bonus_id=10355/10370/6652/10256/1527/10255
+# Ore-namental Sabatons (606)
+feet=,id=223302,enchant_id=7424,bonus_id=10377/10270/3135/10255
+# Band of the Roving Scalawag (606)
+finger1=,id=162541,enchant_id=7346,gem_id=213458/213458,bonus_id=10270/10390/6652/10383/10014/10255/10394/10879
+# Binding of Binding  (619)
+finger2=,id=215133,enchant_id=7334,gem_id=213743/213491,bonus_id=10421/9633/8902/8960/10394/10879/9627/10222/8791/11143,crafted_stats=40/49,crafting_quality=5
+# Ara-Kara Sacbrood (613)
+trinket1=,id=219314,bonus_id=10390/6652/10383/10268/1648/10255
+# Spymaster's Web (626)
+trinket2=,id=220202,bonus_id=6652/10355/10256/1527/10255
+# Arathi Holy Standard (610)
+main_hand=,id=219203,enchant_id=7460,bonus_id=6652/10269/3189/10255
+
+### Gear from Bags
+#
+# Crimson Dracthyr Battlegear Helm (316)
+# head=,id=191807,bonus_id=8774,drop_level=58
+#
+# Wrist Bindings of the Stygian Sea (603)
+# wrist=,id=219159,bonus_id=10271/6652/10876/10377/3182/10255
+#
+# Clasp of Waning Shadow (613)
+# waist=,id=178700,bonus_id=10264/10390/6652/10877/10377/10383/9922/10255
+#
+# Sash of the Stygian Sea (603)
+# waist=,id=219160,bonus_id=10271/6652/10877/10377/3182/10255
+#
+# Shining Arathor Insignia (587)
+# trinket1=,id=225647,bonus_id=10280/6652/1659/10255
+#
+# Cirral Concoctory (613)
+# trinket1=,id=219321,bonus_id=10390/6652/10383/10264/1648/10255
+#
+# Quickwick Candlestick (587)
+# trinket1=,id=225649,bonus_id=10280/40/1659/10255
+#
+# Krix'vizk's Speech Rod (610)
+# main_hand=,id=221166,bonus_id=10265/10390/6652/10384/1645/10255
+#
+# Lakali's Spire of Knowledge (610)
+# main_hand=,id=178714,bonus_id=10265/10390/6652/10384/9919/10255
+#
+# Pail of Preserved Obscurity (610)
+# off_hand=,id=221172,bonus_id=10265/10390/6652/10383/1645/10255
+
+### Weekly Reward Choices
+#
+# Devout Zealot's Ring (623)
+# finger1=,id=221136,bonus_id=10260/10390/6652/10395/10393/10383/1658/10255
+#
+# Anvilhide Cape (619)
+# back=,id=221088,bonus_id=10262/10390/6652/10377/10383/1654/10255
+#
+# Wardbreaker of the Fractured (619)
+# main_hand=,id=221083,bonus_id=10262/10390/6652/10384/1654/10255
+#
+# Gold-Thread Choker (616)
+# neck=,id=219217,bonus_id=10263/6652/10395/10392/3195/10255
+#
+# Enkindled Locket (616)
+# neck=,id=219184,bonus_id=10263/6652/10394/10393/3195/10255
+#
+# Scales of the Destroyer (616)
+# chest=,id=212032,bonus_id=10373/6652/10263/1517/10255
+#
+# Sureki Zealot's Insignia (626)
+# neck=,id=225577,bonus_id=6652/10394/10878/10355/10256/1527/10255
+#
+# Horns of the Destroyer (619)
+# head=,id=212029,bonus_id=10262/10355/10371/6652/10877/1520/10255
+#
+# Clutches of Paranoia (619)
+# hands=,id=212436,bonus_id=41/10379/10355/10262/1520/10255
+#
+### End of Weekly Reward Choices
+
+### Additional Character Info
+#
+# upgrade_currencies=c:2915:195/c:2917:8/c:1792:886/c:2916:362/c:2914:194/c:3008:2000/i:210221:1/i:228338:1
+#
+# slot_high_watermarks=0:606:616/1:603:610/2:626:626/3:626:626/4:613:613/5:626:626/6:606:616/7:636:636/8:626:626/9:616:616/10:613:613/11:626:626/12:610:610/13:610:610/14:357:368/15:0:169/16:610:610
+#
+# upgrade_achievements=40107/40115
+
+# Checksum: 5d0fab66
