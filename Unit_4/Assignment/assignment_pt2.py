@@ -144,9 +144,57 @@
 
 # Step 9: test the function using several URLs. The output should once again include the contents of the meta description and the number of characters in it, in addition
 # to direct feedback about whether the length is too long.
+# import requests
+# from bs4 import BeautifulSoup
+# def meta_desc_len(url):
+#     response = requests.get(url)
+#     if response.status_code == 200:
+#         soup = BeautifulSoup(response.text, 'html.parser')  # Parse HTML
+#         meta_description = soup.find('meta', attrs={'name': 'description'})  # Query contents to find meta description
+#         if meta_description:
+#             # If the description meta tag is found...
+#             contents = meta_description.get('content')  # Store the contents from meta description query
+#             # Return the number of characters
+#             contents_len = len(contents)  # Store the meta description length
+#             if contents_len <= 155:
+#                 return f'"{contents}" is {contents_len} characters long. Meta description length is under 155 characters and thus within recommendations for SEO best-practices.'
+#             else:
+#                 f'"{contents}" is {contents_len} characters long. Meta description length is too long. Keep the number of characters at or under 155 to avoid truncation.'
+#         else:
+#             return "Meta description not found."
+#     else:
+#         return f"Failed to retrieve the webpage. Status code: {response.status_code}"
+# # Test Input:
+# print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')) # Output as expected: "Join thousands of mighty heroes in Azeroth, a world of magic and limitless adventure." is 85 characters long. Meta description length is under 155 characters and thus within recommendations for SEO best-practices.
+# print(meta_desc_len('https://uopeople.edu/')) # Output as expected: "University of the People is a tuition-free online university for students from all over the world. Learn more about University of the People!" is 141 characters long. Meta description length is under 155 characters and thus within recommendations for SEO best-practices.
+# print(meta_desc_len('https://www.tensorflow.org/'))  # "An end-to-end open source machine learning platform for everyone. Discover TensorFlow's flexible ecosystem of tools, libraries and community resources." is 151 characters long. Meta description length is under 155 characters and thus within recommendations for SEO best-practices.
+
+# Step 10: Create docstrings to provide documenation on what the function does and how to use it.
 import requests
 from bs4 import BeautifulSoup
+
 def meta_desc_len(url):
+    """
+    Fetches the meta description of a webpage and returns its length along with a message
+    about whether the length adheres to SEO best practices.
+
+    This function makes a GET request to the provided URL, parses the HTML content,
+    and looks for a <meta> tag with the name attribute set to "description". If found, it 
+    returns the content of the meta description, its length, and an evaluation of whether 
+    the length is under the recommended 155-character limit for SEO. If no meta description 
+    is found or if the webpage cannot be accessed, appropriate error messages are returned.
+
+    Args:
+        url (str): The URL of the webpage to analyze.
+
+    Returns:
+        str: A message with the meta description content, its length, and SEO assessment 
+             or an error message if the meta description is not found or the request fails.
+
+    Example:
+        >>> meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')
+        '"Join thousands of mighty heroes in Azeroth, a world of magic and limitless adventure." is 85 characters long. Meta description length is under 155 characters and thus within recommendations for SEO best-practices.'
+    """
     response = requests.get(url)
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')  # Parse HTML
@@ -159,7 +207,7 @@ def meta_desc_len(url):
             if contents_len <= 155:
                 return f'"{contents}" is {contents_len} characters long. Meta description length is under 155 characters and thus within recommendations for SEO best-practices.'
             else:
-                f'"{contents}" is {contents_len} characters long. Meta description length is too long. Keep the number of characters at or under 155 to avoid truncation.'
+                return f'"{contents}" is {contents_len} characters long. Meta description length is too long. Keep the number of characters at or under 155 to avoid truncation.'
         else:
             return "Meta description not found."
     else:
