@@ -26,12 +26,12 @@
 # def meta_desc_len(url):
 #     response = requests.get(url)
 #     if response.status_code == 200:
-#         soup = BeautifulSoup(response.text, 'html.parser')
+#         soup = BeautifulSoup(response.text, 'html.parser')  # Parse HTML
 #         return soup
 #     else:
 #         return f"Failed to retrieve the webpage. Status code: {response.status_code}"
 # # Test Input:
-# print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')) #Output: all HTML code from the webpage -- too large to include here (as expected). Full output: https://pastebin.com/XjZ09y5L
+# print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/'))  Output (as expected): all HTML code from the webpage -- too large to include here. Full output: https://pastebin.com/XjZ09y5L
 
 # Step 4: Using soup.find(), we can query the HTML to search for specific elements. Because meta descriptions are always stored as <meta name="description">, we can easily
 # find the meta description tag of a page if it exists.
@@ -40,13 +40,13 @@
 # def meta_desc_len(url):
 #     response = requests.get(url)
 #     if response.status_code == 200:
-#         soup = BeautifulSoup(response.text, 'html.parser')
-#         meta_description = soup.find('meta', attrs={'name': 'description'})
+#         soup = BeautifulSoup(response.text, 'html.parser')  # Parse HTML
+#         meta_description = soup.find('meta', attrs={'name': 'description'})  # Query contents to find meta description
 #         return meta_description
 #     else:
 #         return f"Failed to retrieve the webpage. Status code: {response.status_code}"
 # # Test Input:
-# print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')) # Output: matching HTML code relative to the query; too large to include here (as expected). Full output: https://pastebin.com/TBxySmUJ
+# print(meta_desc_len('https://worldofwarcraft.blizzard.com/en-us/')) # Output (as expected): matching HTML code relative to the query; too large to include here. Full output: https://pastebin.com/TBxySmUJ
 
 # Step 5: If the meta description exists, return its content. If not, inform the user no meta description was found.
 # import requests
@@ -54,8 +54,8 @@
 # def meta_desc_len(url):
 #     response = requests.get(url)
 #     if response.status_code == 200:
-#         soup = BeautifulSoup(response.text, 'html.parser')
-#         meta_description = soup.find('meta', attrs={'name': 'description'})
+#         soup = BeautifulSoup(response.text, 'html.parser')  # Parse HTML
+#         meta_description = soup.find('meta', attrs={'name': 'description'})  # Query contents to find meta description
 #         if meta_description:
 #             # If the description meta tag is found...
 #             # Return the contents
@@ -74,11 +74,11 @@
 # def meta_desc_len(url):
 #     response = requests.get(url)
 #     if response.status_code == 200:
-#         soup = BeautifulSoup(response.text, 'html.parser')
-#         meta_description = soup.find('meta', attrs={'name': 'description'})
+#         soup = BeautifulSoup(response.text, 'html.parser')  # Parse HTML
+#         meta_description = soup.find('meta', attrs={'name': 'description'})  # Query contents to find meta description
 #         if meta_description:
 #             # If the description meta tag is found...
-#             contents = meta_description.get('content')
+#             contents = meta_description.get('content')  # Store the contents from meta description query
 #             # Return the number of characters
 #             return len(contents)
 #         else:
@@ -96,13 +96,13 @@
 # def meta_desc_len(url):
 #     response = requests.get(url)
 #     if response.status_code == 200:
-#         soup = BeautifulSoup(response.text, 'html.parser')
-#         meta_description = soup.find('meta', attrs={'name': 'description'})
+#         soup = BeautifulSoup(response.text, 'html.parser')  # Parse HTML
+#         meta_description = soup.find('meta', attrs={'name': 'description'})  # Query contents to find meta description
 #         if meta_description:
 #             # If the description meta tag is found...
-#             contents = meta_description.get('content')
+#             contents = meta_description.get('content')  # Store the contents from meta description query
 #             # Return the number of characters
-#             contents_len = len(contents)
+#             contents_len = len(contents)  # Store the meta description length
 #             if contents_len <= 155:
 #                 return 'Meta description length is under 155 characters and thus within recommendations for SEO best-practices.'
 #             else:
@@ -121,13 +121,13 @@
 # def meta_desc_len(url):
 #     response = requests.get(url)
 #     if response.status_code == 200:
-#         soup = BeautifulSoup(response.text, 'html.parser')
-#         meta_description = soup.find('meta', attrs={'name': 'description'})
+#         soup = BeautifulSoup(response.text, 'html.parser')  # Parse HTML
+#         meta_description = soup.find('meta', attrs={'name': 'description'})  # Query contents to find meta description
 #         if meta_description:
 #             # If the description meta tag is found...
-#             contents = meta_description.get('content')
+#             contents = meta_description.get('content')  # Store the contents from meta description query
 #             # Return the number of characters
-#             contents_len = len(contents)
+#             contents_len = len(contents)  # Store the meta description length
 #             if contents_len <= 155:
 #                 return f'"{contents}" is {contents_len} characters long. Meta description length is under 155 characters and thus within recommendations for SEO best-practices.'
 #             else:
@@ -145,13 +145,13 @@ from bs4 import BeautifulSoup
 def meta_desc_len(url):
     response = requests.get(url)
     if response.status_code == 200:
-        soup = BeautifulSoup(response.text, 'html.parser')
-        meta_description = soup.find('meta', attrs={'name': 'description'})
+        soup = BeautifulSoup(response.text, 'html.parser')  # Parse HTML
+        meta_description = soup.find('meta', attrs={'name': 'description'})  # Query contents to find meta description
         if meta_description:
             # If the description meta tag is found...
-            contents = meta_description.get('content')
+            contents = meta_description.get('content')  # Store the contents from meta description query
             # Return the number of characters
-            contents_len = len(contents)
+            contents_len = len(contents)  # Store the meta description length
             if contents_len <= 155:
                 return f'"{contents}" is {contents_len} characters long. Meta description length is under 155 characters and thus within recommendations for SEO best-practices.'
             else:
